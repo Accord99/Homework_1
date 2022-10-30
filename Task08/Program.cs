@@ -1,2 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//  Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+Console.WriteLine("Введите положительное число: ");
+int number = int.Parse(Console.ReadLine());
+int count = 1;
+if(number <= 0)
+{
+    Console.WriteLine("Вы ввели неверное число, запустите программу заново");
+}
+else
+{
+    while(count <= number)
+    {
+        int reminder = count % 2;
+        if(reminder == 0)
+        {
+            Console.Write($"{count}. ");
+            count++;
+        }
+        else
+        {
+            count++;
+        }
+    }
+}
